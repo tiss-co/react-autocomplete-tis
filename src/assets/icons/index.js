@@ -1,0 +1,1 @@
+export { ReactComponent as DownIcon } from './down.svg';
