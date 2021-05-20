@@ -3,6 +3,7 @@
 > Autocomplete component for React
 
 [![NPM](https://img.shields.io/npm/v/react-autocomplete-tis.svg)](https://www.npmjs.com/package/react-autocomplete-tis) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+![react-autocomplete-tis Banner](https://user-images.githubusercontent.com/76048512/119012045-e99ea800-b9aa-11eb-9c97-784cb6551327.gif)
 ![react-autocomplete-tis Banner](https://user-images.githubusercontent.com/76048512/119011035-e0f9a200-b9a9-11eb-89ab-4af2804bdad3.gif)
 
 ## Install
