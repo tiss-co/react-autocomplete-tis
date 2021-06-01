@@ -63,14 +63,14 @@ export const AutoComplete = ({
   return (
     <div
       ref={autoCompleteRef}
-      className={classNames(css.Autocomplete, {
-        [css.Dark]: darkMode
+      className={classNames(css.Autocomplete_AutoCompleteTis, {
+        [css.Dark_AutoCompleteTis]: darkMode
       }, className)}
     >
       <input
-        className={classNames(css.Input, {
-          [css.RoundedBorder]: roundedBorder,
-          [css.Dark]: darkMode
+        className={classNames(css.Input_AutoCompleteTis, {
+          [css.RoundedBorder_AutoCompleteTis]: roundedBorder,
+          [css.Dark_AutoCompleteTis]: darkMode
         })}
         placeholder={placeholder}
         type='text'

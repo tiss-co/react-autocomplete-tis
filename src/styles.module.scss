@@ -20,7 +20,7 @@ $bg-color-medium-dark: #24252666;
   --AC-down-icon-size: 10px;
 }
 
-.Autocomplete {
+.Autocomplete_AutoCompleteTis {
   width: fit-content;
   position: relative;
   z-index: 9;
@@ -73,7 +73,7 @@ $bg-color-medium-dark: #24252666;
     cursor: pointer;
   }
 
-  &.Dark {
+  &.Dark_AutoCompleteTis {
     ul {
       background-color: $bg-color-dark-dark;
       color: $font-color-medium-dark;
@@ -93,7 +93,7 @@ $bg-color-medium-dark: #24252666;
   }
 }
 
-.Input {
+.Input_AutoCompleteTis {
   height: fit-content;
   width: 100%;
   background-color: transparent;
@@ -110,17 +110,17 @@ $bg-color-medium-dark: #24252666;
     font-family: $font-family-regular;
     font-style: italic;
   }
-  &.RoundedBorder {
+  &.RoundedBorder_AutoCompleteTis {
     border: 1px solid $bg-color-border-light;
     border-radius: 25px;
     padding: 7.5px;
     padding-left: 15px;
   }
 
-  &.Dark {
+  &.Dark_AutoCompleteTis {
     color: $font-color-medium-dark;
     border-color: $bg-color-border-dark;
-    &.RoundedBorder {
+    &.RoundedBorder_AutoCompleteTis {
       border-color: $bg-color-border-dark;
     }
   }
