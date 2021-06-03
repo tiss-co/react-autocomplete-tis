@@ -1,6 +1,6 @@
 {
   "name": "react-autocomplete-tis",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Autocomplete component for React",
   "author": "boof-tech",
   "license": "MIT",
@@ -45,13 +45,13 @@
     "prettier": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.2.0"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
     "classnames": "^2.3.1",
-    "node-sass": "^6.0.0"
+    "node-sass": "^4.14.1"
   }
 }
