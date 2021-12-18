@@ -36,7 +36,7 @@ export const AutoComplete = ({
     setSuggestions(newSuggestions);
     setValue(value);
 
-    clearTimeout(typingTimer);
+    clearTimeout(typingTimer.current);
 
     typingTimer.current = setTimeout(() => {
       onTextChange(value);
