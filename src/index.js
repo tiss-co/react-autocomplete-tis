@@ -16,12 +16,16 @@ export const AutoComplete = ({
 }) => {
   const [value, setValue] = useState('');
   const [suggestions, setSuggestions] = useState([]);
+  const [clicked, setClicked] = useState(false);
 
   const autoCompleteRef = useRef();
   const typingTimer = useRef();
 
   const handleOutsideClick = e => {
-    if (!autoCompleteRef.current.contains(e?.target)) setSuggestions([]);
+    if (!autoCompleteRef.current.contains(e?.target)) {
+      setClicked(false);
+      setSuggestions([]);
+    }
   };
 
   const handleTextChange = ({ target: { value = '' } }) => {
@@ -77,11 +81,14 @@ export const AutoComplete = ({
         type='text'
         value={value}
         onChange={handleTextChange}
-        onFocus={() => setSuggestions(options)}
+        onFocus={() => {
+          setClicked(true);
+          setSuggestions(options);
+        }}
       />
-      {downIcon || <DownIcon onClick={() => setSuggestions(options)} />}
+      {downIcon || <DownIcon />}
       <ul>
-        {suggestions?.map((suggestion, index) => (
+        {clicked && suggestions?.map((suggestion, index) => (
           <li
             key={suggestion + index}
             onClick={() => handleSuggestionSelected(suggestion, index)}
