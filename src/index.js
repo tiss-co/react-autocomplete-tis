@@ -11,7 +11,8 @@ export const AutoComplete = ({
   onTextChange = () => { },
   onSelect = () => { },
   roundedBorder = false,
-  darkMode = false
+  darkMode = false,
+  downIcon
 }) => {
   const [value, setValue] = useState('');
   const [suggestions, setSuggestions] = useState([]);
@@ -78,7 +79,7 @@ export const AutoComplete = ({
         onChange={handleTextChange}
         onFocus={() => setSuggestions(options)}
       />
-      <DownIcon onClick={() => setSuggestions(options)} />
+      {downIcon || <DownIcon onClick={() => setSuggestions(options)} />}
       <ul>
         {suggestions?.map((suggestion, index) => (
           <li
@@ -101,4 +102,5 @@ AutoComplete.propTypes = {
   onSelect: PropTypes.func.isRequired,
   roundedBorder: PropTypes.bool,
   darkMode: PropTypes.bool,
+  downIcon: PropTypes.object,
 };
