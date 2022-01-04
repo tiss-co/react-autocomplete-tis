@@ -10,6 +10,7 @@ export const AutoComplete = ({
   options,
   onTextChange = () => { },
   onSelect = () => { },
+  onFocus = () => { },
   roundedBorder = false,
   darkMode = false,
   downIcon
@@ -84,6 +85,7 @@ export const AutoComplete = ({
         onFocus={() => {
           setClicked(true);
           setSuggestions(options);
+          onFocus();
         }}
       />
       {downIcon || <DownIcon />}
@@ -107,6 +109,7 @@ AutoComplete.propTypes = {
   options: PropTypes.arrayOf(PropTypes.any),
   onTextChange: PropTypes.func,
   onSelect: PropTypes.func.isRequired,
+  onFocus: PropTypes.func.isRequired,
   roundedBorder: PropTypes.bool,
   darkMode: PropTypes.bool,
   downIcon: PropTypes.object,
