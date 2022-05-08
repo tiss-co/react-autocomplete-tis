@@ -13,7 +13,9 @@ export const AutoComplete = ({
   onFocus = () => { },
   roundedBorder = false,
   darkMode = false,
-  downIcon
+  downIcon,
+  containerId,
+  inputId
 }) => {
   const [value, setValue] = useState('');
   const [suggestions, setSuggestions] = useState([]);
@@ -72,6 +74,7 @@ export const AutoComplete = ({
       className={classNames(css.Autocomplete_AutoCompleteTis, {
         [css.Dark_AutoCompleteTis]: darkMode
       }, className)}
+      id={containerId}
     >
       <input
         className={classNames(css.Input_AutoCompleteTis, {
@@ -87,6 +90,7 @@ export const AutoComplete = ({
           setSuggestions(options);
           onFocus();
         }}
+        id={inputId}
       />
       {downIcon || <DownIcon />}
       <ul>
@@ -113,4 +117,6 @@ AutoComplete.propTypes = {
   roundedBorder: PropTypes.bool,
   darkMode: PropTypes.bool,
   downIcon: PropTypes.object,
+  containerId: PropTypes.string,
+  inputId: PropTypes.string,
 };
